@@ -1,0 +1,146 @@
+
+/* The animation code */
+@keyframes show {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.itemList {
+  article {
+    min-height: 455px;
+  }
+  .item {
+    margin-top: 20px;
+    opacity: 0;
+    animation-name: show;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+    
+    .block {
+      height: 455px;
+      position: relative;
+      padding: 10px;
+      border: 1px solid #e5e5e5;
+      -webkit-transition:all 0.5s;
+      -moz-transition:all 0.5s;
+      -o-transition:all 0.5s;
+      -ms-transition:all 0.5s;
+      transition:all 0.5s;
+      a {
+        display: block;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &:hover {
+        border-color: #d9d9d9;
+        box-shadow: 0 5px 5px #d9d9d9;
+      }
+    }
+    .img {
+      position: relative;
+      height: 250px;
+      border: 1px solid #e5e5e5;
+      text-align: center;
+      overflow: hidden;
+      .sale, .new {
+        position: absolute;
+        top: 50%;
+        color: #fff;
+        margin-top: -19px;
+        padding: 10px 20px;
+        font-weight: 500;
+        font-size: 13px;
+        z-index: 1;
+        
+        text-transform: uppercase;
+      }
+      .sale {
+        background: $red;
+        left: 0;
+      }
+      .new {
+        background: #000;
+        right: 0;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        -webkit-transition:all 0.5s;
+        -moz-transition:all 0.5s;
+        -o-transition:all 0.5s;
+        -ms-transition:all 0.5s;
+        transition:all 0.5s;
+        &:hover {
+          -webkit-transform:scale(1.05);
+          -moz-transform:scale(1.05);
+          transform:scale(1.05);
+        }
+      }
+    }
+    .title {
+      margin-top: 13px;
+      font-size: 14px;
+      font-family: 'Ubuntu', sans-serif;  
+      font-weight: 400;
+      color: #333333;
+      &:hover {
+        color: #333333;
+      }
+    }
+    ul {
+      li {
+        display: inline-block;
+        font-weight: normal;
+      }
+    }
+    .description {
+      margin-top: 10px;
+      font-size: 11px;
+      font-family: 'Ubuntu', sans-serif;  
+      font-weight: 300;
+      color: #a5a4a4;
+      &:hover {
+        color: #a5a4a4;
+      }
+    }
+    .price {
+      font-size: 25px;
+      margin-top: 16px;
+    }
+    .discount {
+      font-size: 17px;
+      margin-left: 16px;
+      color: $red;
+      text-decoration: line-through;
+    }
+    .bottom {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      li {
+        width: 50%;
+        float: left;
+        button {
+          width: 100%;  
+        }
+        &:first-child {
+          padding-right: 7px;
+        }
+        &:last-child {
+          padding-left: 7px;
+        }
+      }
+    }
+  }
+
+  .load_more {
+    margin-top: 40px;
+    text-align: center;
+    min-height: 35px;
+  }
+}
+
+

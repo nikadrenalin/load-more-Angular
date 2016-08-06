@@ -1,0 +1,35 @@
+<article class="clearfix">
+  <div class="item col-lg-3 item col-md-3 item col-sm-4 item col-xs-12" ng-repeat="item in $ctrl.items track by $index">
+    <div class="block">
+      <div class="img">
+        <a  href="#" class="sale" ng-if="item.discountCost">sale</a>
+        <a  href="#" class="new" ng-if="item.new">new</a>
+        <a href="#">
+          <img ng-src="{{item.img}}" alt="{{item.title}}" title="{{item.title}}">
+        </a>
+      </div>
+      <a href="#" class="title">
+        {{item.title}}
+      </a>
+      <a href="#" class="description">
+        {{item.description}}
+      </a>
+      <ul>
+        <li class="price">${{item.cost}}</li>
+        <li class="discount" ng-if="item.discountCost">${{item.discountCost}}</li>
+      </ul>
+      <ul class="bottom clearfix">
+        <li>
+          <button type="button" class="btn btn-default red_btn">Add to cart</button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-default">View</button>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- item -->
+</article>
+
+<div class="load_more clearfix">
+  <button type="button" class="btn btn-default red_btn load_more_btn" ng-click="$ctrl.loadItems()" ng-if="$ctrl.nextItems.length">load more</button>
+</div> <!-- load_more -->

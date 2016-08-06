@@ -1,0 +1,146 @@
+
+$red: #ed1111;
+
+body {
+  font-size: 11px;
+  font-family: 'Ubuntu', sans-serif;  
+  font-weight: 300;
+  color: #a5a4a4;
+}
+
+.container {
+  max-width: 1230px;
+  margin: auto;
+}
+
+.fa {
+  color: $red;
+}
+
+.btn {
+  color: #999e9f;
+  padding: 8px 12px;
+  border-radius: 0;
+  border: 1px solid #e5e5e5;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #d9d9d9;
+  &:hover {
+    border-color: #e5e5e5;
+    background: #d9d9d9;
+    color: #999e9f;
+  }
+}
+
+.red_btn {
+  color: $red;
+  background: none;
+  &:hover {
+    // font-size: 13px;
+    font-weight: 500;
+    border-color: #ed8e8e;
+    background: #ed8e8e;
+    color: $red;
+  }
+}
+
+.load_more_btn {
+  outline: none;
+  -webkit-transition:all 0.5s;
+  -moz-transition:all 0.5s;
+  -o-transition:all 0.5s;
+  -ms-transition:all 0.5s;
+  transition:all 0.5s;
+
+  animation-name: show;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+  &:hover {
+    border-color: $red;
+    background: #fff;
+    font-weight: 400;
+    color: $red;
+  }
+  &:active {
+    outline: none;
+  }
+}
+
+.footer {
+  margin-top: 130px;
+}
+
+footer {
+  margin-top: 130px;
+  .block {
+    padding-right: 5%;
+    margin-bottom: 50px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #333333;
+    text-transform: uppercase;
+  }
+  p {
+    margin-top: 20px;
+  }
+  .fa-caret-right {
+    position: absolute;
+    left: 0;
+    top: 3px;
+  }
+  .fa-2x {
+    text-align: center;
+  }
+  .text {
+    padding: 0;
+  }
+  ul.contacts {
+    margin-left: -15px;
+    li {
+      padding-left: 0;
+    }
+  }
+  ul {
+    margin-top: 20px;
+    li {
+      margin-bottom: 15px;
+      padding-left: 15px;
+      position: relative;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (max-width:1200px){
+  .btn {padding: 8px 7px;font-size: 10px;}
+}
+
+@media screen and (max-width:992px){
+  
+}
+
+@media screen and (max-width:768px){
+  .btn {padding: 8px 12px;font-size: 12px;}
+  .itemList .item {width: 50%;}
+}
+
+@media screen and (max-width:600px){
+  .btn {padding: 8px 12px;font-size: 12px;}
+  .itemList .item {width: 100%;}
+  .itemList .item .block {width: 80%;margin: auto;}
+}
+
+@media screen and (max-width:600px){
+  .itemList .item .block {width: 100%;margin: auto;}
+}

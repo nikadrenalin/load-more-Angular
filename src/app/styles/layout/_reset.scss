@@ -1,0 +1,72 @@
+html {
+    margin: 0 !important;
+}
+
+fieldset {
+    border: none;
+}
+
+img {
+    border-style: none;
+}
+
+button {
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+img {
+    vertical-align: top;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    font: 14px 'Ubuntu', sans-serif;
+    color: #42515A;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+}
+
+form input[type="submit"] {
+    border: none;
+}
+
+form fieldset {
+    padding: 0;
+}
+
+.clearfix {
+    clear: both;
+    overflow: hidden;
+}
